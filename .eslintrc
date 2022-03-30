@@ -1,0 +1,13 @@
+{
+  "plugins": ["react", "prettier"],
+  "extends": ["react-app", "prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "warn",
+      {
+        "singleQuote": true,
+        "semi": false
+      }
+    ]
+  }
+}

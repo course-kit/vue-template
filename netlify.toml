@@ -1,0 +1,10 @@
+[dev]
+  command = "npm run dev"
+
+[build]
+  command = "npm run build"
+  publish = "build"
+  functions = "functions"
+
+[functions]
+  node_bundler = "esbuild"
