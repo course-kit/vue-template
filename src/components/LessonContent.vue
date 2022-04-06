@@ -1,5 +1,6 @@
 <script setup>
 import { useRouter } from 'vue-router'
+import { vueVimeoPlayer } from 'vue-vimeo-player'
 const router = useRouter()
 import { ChevronDoubleRightIcon } from '@heroicons/vue/solid'
 const props = defineProps({
@@ -23,7 +24,7 @@ async function completeAndContinue() {
 
 <template>
   <div className="Content">
-    <Vimeo v-if="lesson.meta.vimeoId" :video="lesson.meta.vimeoId" responsive />
+    <vue-vimeo-player v-if="lesson.meta.vimeoId" :video-id="lesson.meta.vimeoId" :options="{ responsive: true }" />
     <div class="markdown" v-html="lesson.html" />
     <button class="button primary icon" @click="completeAndContinue">
       <span>Complete and continue</span>
