@@ -1,11 +1,12 @@
 <script setup>
 import { fetchUser } from '../ck'
-const { user } = fetchUser()
+const { user } = await fetchUser()
+const isAuthenticated = user.isAuthenticated()
 </script>
 
 <template>
   <nav class="Nav">
-    <button v-if="user.isAuthenticated" class="button auth" @click="user.logoutRedirect">
+    <button v-if="isAuthenticated" class="button auth" @click="user.logoutRedirect">
       Log out
     </button>
     <button v-else class="button auth" @click="user.loginRedirect">

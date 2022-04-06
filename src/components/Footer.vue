@@ -9,7 +9,7 @@
           <a href="https://coursekit.dev">Created with CourseKit</a>
         </li>
         <li>
-          <a href="https://github.com/course-kit/react-template">
+          <a href="https://github.com/course-kit/vue-template">
             Source code
           </a>
         </li>

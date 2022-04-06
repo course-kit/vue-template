@@ -8,17 +8,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@coursekit/client": "0.1.4-beta.1",
-    "@heroicons/react": "^1.0.5",
+    "@coursekit/client": "0.1.4",
+    "@heroicons/vue": "^1.0.5",
     "stripe": "^8.213.0",
     "vue": "^3.2.25",
+    "vue-final-modal": "^3.4.3",
     "vue-router": "^4.0.14"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.2.0",
-    "vite": "^2.8.0",
     "eslint-config-prettier": "^8.4.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "vite": "^2.8.0"
   }
 }

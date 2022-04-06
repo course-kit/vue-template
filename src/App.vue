@@ -1,14 +1,22 @@
 <script setup>
 import Nav from './components/Nav.vue'
 import Footer from './components/Footer.vue'
+import Loading from './components/Loading.vue'
 </script>
 
 <template>
   <div class="App">
-    <Nav />
-    <main>
-      <router-view></router-view>
-    </main>
+    <Suspense>
+      <div>
+        <Nav />
+        <main>
+          <router-view></router-view>
+        </main>
+      </div>
+      <template #fallback>
+        <Loading />
+      </template>
+    </Suspense>
     <Footer />
   </div>
 </template>

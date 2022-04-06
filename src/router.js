@@ -4,9 +4,9 @@ import Course from './pages/Course.vue'
 import Lesson from './pages/Lesson.vue'
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/courses/:courseId', component: Course },
-  { path: '/courses/:courseId/lessons/:lessonId', component: Lesson }
+  { name: 'home', path: '/', component: Home },
+  { name: 'course', path: '/courses/:courseId', component: Course },
+  { name: 'lesson', path: '/courses/:courseId/lessons/:lessonId', component: Lesson }
 ]
 
 const router = createRouter({
