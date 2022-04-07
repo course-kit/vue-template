@@ -2,17 +2,24 @@
 import Nav from './components/Nav.vue'
 import Footer from './components/Footer.vue'
 import Loading from './components/Loading.vue'
+import Error from './components/Error.vue'
+import {onErrorCaptured, ref} from "vue"
+const error = ref(false)
+onErrorCaptured((err) => {
+  error.value = true
+})
 </script>
 
 <template>
   <div class="App">
     <Suspense>
-      <div>
+      <div v-if="!error">
         <Nav />
         <main>
           <router-view></router-view>
         </main>
       </div>
+      <Error v-else />
       <template #fallback>
         <Loading />
       </template>

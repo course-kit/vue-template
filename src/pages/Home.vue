@@ -1,6 +1,7 @@
 <script setup>
-import { fetchCourseSummaries } from '../ck'
+import { fetchCourseSummaries, fetchUser } from '../ck'
 import CourseSummary from '../components/CourseSummary.vue'
+const { user } = await fetchUser()
 const { courses } = await fetchCourseSummaries()
 </script>
 

@@ -3,8 +3,9 @@ import LessonSummary from '../components/LessonSummary.vue'
 import CourseHeader from '../components/CourseHeader.vue'
 import { useRoute } from 'vue-router'
 const route = useRoute()
-import { fetchCourse } from '../ck'
+import { fetchCourse, fetchUser } from '../ck'
 const courseId = route.params.courseId
+const { user } = await fetchUser()
 const { course } = await fetchCourse({ courseId })
 const { title, lessons } = course
 </script>
