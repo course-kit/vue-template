@@ -23,7 +23,7 @@ const email = ref('')
 
 async function handleSubmit(event) {
   const url = '/.netlify/functions/enroll'
-  loading.vallue = true
+  loading.value.vallue = true
   try {
     const { status } = await fetch(url, {
       method: 'POST',
@@ -48,7 +48,7 @@ async function handleSubmit(event) {
 
 <template>
   <span>
-    <span @click="show = true" :class="classes">
+    <span :class="classes" @click="show = true">
       {{ text }}
     </span>
     <vue-final-modal
@@ -61,11 +61,11 @@ async function handleSubmit(event) {
         <div class="form">
           <input
             value="email"
-            @change="email = $event.target.value"
             type="text"
             name="email"
             placeholder="Your email"
             autoFocus
+            @change="email = $event.target.value"
           />
           <button class="button primary" @click="handleSubmit">
             <span>Submit</span>

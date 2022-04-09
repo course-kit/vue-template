@@ -5,7 +5,7 @@ import Loading from './components/Loading.vue'
 import Error from './components/Error.vue'
 import {onErrorCaptured, ref} from "vue"
 const error = ref(false)
-onErrorCaptured((err) => {
+onErrorCaptured(() => {
   error.value = true
 })
 </script>

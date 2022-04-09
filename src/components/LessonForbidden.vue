@@ -13,7 +13,7 @@ defineProps({
     <div>
       Please
       <EnrollFree
-        :courseId="courseId"
+        :course-id="courseId"
         text="enroll"
         classes="underline cursor-pointer"
       />

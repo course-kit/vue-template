@@ -5,7 +5,7 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 import { fetchCourse, fetchUser } from '../ck'
 const courseId = route.params.courseId
-const { user } = await fetchUser()
+await fetchUser()
 const { course } = await fetchCourse({ courseId })
 const { title, lessons } = course
 </script>
@@ -22,10 +22,10 @@ const { title, lessons } = course
     <div>
       <LessonSummary
         v-for="(lesson, index) in lessons"
-        :courseId="courseId"
+        :key="index"
+        :course-id="courseId"
         :lesson="lesson"
         :num="index + 1"
-        :key="index"
       />
     </div>
   </div>

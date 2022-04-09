@@ -1,7 +1,7 @@
 <script setup>
 import { fetchCourseSummaries, fetchUser } from '../ck'
 import CourseSummary from '../components/CourseSummary.vue'
-const { user } = await fetchUser()
+await fetchUser()
 const { courses } = await fetchCourseSummaries()
 </script>
 
@@ -10,6 +10,6 @@ const { courses } = await fetchCourseSummaries()
     <header>
       <h1>CourseKit Vue Template</h1>
     </header>
-    <CourseSummary v-for="course in courses" :course="course" :key="course.id" />
+    <CourseSummary v-for="course in courses" :key="course.id" :course="course" />
   </div>
 </template>

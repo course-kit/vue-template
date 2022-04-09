@@ -24,7 +24,7 @@ defineProps({
       </span>
       or
       <EnrollFree
-        :courseId="courseId"
+        :course-id="courseId"
         text="enroll"
         classes="underline cursor-pointer"
       />

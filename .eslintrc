@@ -1,13 +1,20 @@
 {
-  "plugins": ["react", "prettier"],
-  "extends": ["react-app", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/vue3-recommended",
+    "prettier"
+  ],
   "rules": {
-    "prettier/prettier": [
-      "warn",
-      {
-        "singleQuote": true,
-        "semi": false
-      }
-    ]
+    "vue/no-v-html": 0,
+    "vue/multi-word-component-names": 0
+  },
+  "env": {
+    "vue/setup-compiler-macros": true
+  },
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "espree",
+    "ecmaVersion": 2022,
+    "sourceType": "module"
   }
 }

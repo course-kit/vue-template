@@ -1,5 +1,9 @@
 import { CourseKitClient } from '@coursekit/client'
-const ck = new CourseKitClient({ schoolId: import.meta.env.VITE_SCHOOL_ID, devMode: true })
+const ck = new CourseKitClient({
+  schoolId: import.meta.env.VITE_SCHOOL_ID,
+  devMode: true,
+  baseUrl: 'http://api.coursekit.test:8080/v1'
+})
 
 const fetchUser = async () => {
   const { status, user } = await ck.loadUser()

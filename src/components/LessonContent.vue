@@ -17,7 +17,11 @@ async function completeAndContinue() {
   const success = await props.lesson.markComplete()
   if (success) {
     const nextLessonId = props.course.nextLessonId
-    router.push(`/courses/${props.course.id}/lessons/${nextLessonId}`)
+    if (nextLessonId) {
+      router.push(`/courses/${props.course.id}/lessons/${nextLessonId}`)
+    } else {
+      router.push(`/courses/${props.course.id}`)
+    }
   }
 }
 </script>
