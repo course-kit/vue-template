@@ -82,13 +82,13 @@ async function handleSubmit(event) {
           </button>
         </div>
       </div>
-      <div className="alert success" v-if="submitted && !error">
+      <div v-if="submitted && !error" className="alert success">
         <CheckCircleIcon />
         <span>
           Success! Please check your email to activate your course.
         </span>
       </div>
-      <div className="alert error" v-if="submitted && error">
+      <div v-if="submitted && error" className="alert error">
         <ExclamationCircleIcon />
         <span>Submission failed. Please try again later.</span>
       </div>

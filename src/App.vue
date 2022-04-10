@@ -16,7 +16,7 @@ onErrorCaptured(() => {
       <div v-if="!error">
         <Nav />
         <main>
-          <router-view></router-view>
+          <router-view :key="$route.fullPath"></router-view>
         </main>
       </div>
       <Error v-else />

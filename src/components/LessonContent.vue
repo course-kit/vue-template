@@ -1,26 +1,21 @@
 <script setup>
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import { vueVimeoPlayer } from 'vue-vimeo-player'
-const router = useRouter()
 import { ChevronDoubleRightIcon } from '@heroicons/vue/solid'
-const props = defineProps({
-  lesson: {
-    type: Object,
-    required: true
-  },
-  course: {
-    type: Object,
-    required: true
-  }
-})
+import { fetchLesson, fetchCourse } from "../ck";
+const router = useRouter()
+const route = useRoute()
+const { courseId, lessonId }  = route.params
+const { lesson } = await fetchLesson({ courseId, lessonId })
 async function completeAndContinue() {
-  const success = await props.lesson.markComplete()
+  const success = await lesson.markComplete()
+  const { course } = await fetchCourse({ courseId })
   if (success) {
-    const nextLessonId = props.course.nextLessonId
+    const nextLessonId = course.nextLessonId
     if (nextLessonId) {
-      router.push(`/courses/${props.course.id}/lessons/${nextLessonId}`)
+      router.push(`/courses/${course.id}/lessons/${nextLessonId}`)
     } else {
-      router.push(`/courses/${props.course.id}`)
+      router.push(`/courses/${course.id}`)
     }
   }
 }
