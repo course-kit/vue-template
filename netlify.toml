@@ -3,7 +3,7 @@
 
 [build]
   command = "npm run build"
-  publish = "build"
+  publish = "dist"
   functions = "functions"
 
 [functions]
