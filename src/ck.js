@@ -1,8 +1,7 @@
 import { CourseKitClient } from '@coursekit/client'
 const ck = new CourseKitClient({
   schoolId: import.meta.env.VITE_SCHOOL_ID,
-  devMode: true,
-  baseUrl: 'http://api.coursekit.test:8080/v1'
+  devMode: import.meta.env.DEV,
 })
 
 const fetchUser = async () => {
