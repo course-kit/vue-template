@@ -14,7 +14,7 @@ const courses = [
 ]
 
 async function enrollUser(enrollmentUrl, email) {
-  await fetch(enrollmentUrl, {
+  return await fetch(enrollmentUrl, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -27,11 +27,10 @@ exports.handler = async ({ body, headers }) => {
   try {
     const { email, courseId } = JSON.parse(body)
     const { enrollmentUrl } = courses.find((course) => course.courseId === courseId)
-    await enrollUser(enrollmentUrl, email)
-
+    const { status, statusText } = await enrollUser(enrollmentUrl, email)
     return {
-      statusCode: 200,
-      body: JSON.stringify({ received: true }),
+      statusCode: status,
+      body: JSON.stringify({ message: statusText }),
     }
   } catch (err) {
     console.log(`Enrollment failed with ${err}`)
