@@ -2,7 +2,7 @@
 import { useRouter, useRoute } from 'vue-router'
 import { vueVimeoPlayer } from 'vue-vimeo-player'
 import { ChevronDoubleRightIcon } from '@heroicons/vue/solid'
-import { fetchLesson, fetchCourse } from "../ck";
+import { fetchLesson, fetchCourse } from "../ck"
 const router = useRouter()
 const route = useRoute()
 const { courseId, lessonId }  = route.params

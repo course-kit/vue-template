@@ -1,7 +1,7 @@
 {
   "name": "coursekit-vue-template",
-  "private": true,
-  "version": "0.1.4",
+  "private": false,
+  "version": "0.2.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -9,7 +9,7 @@
     "lint": "eslint 'src/**/*.{js,vue}'"
   },
   "dependencies": {
-    "@coursekit/client": "0.1.4",
+    "@coursekit/client": "0.2.0",
     "@heroicons/vue": "^1.0.5",
     "node-fetch": "^2.6.7",
     "stripe": "^8.213.0",
