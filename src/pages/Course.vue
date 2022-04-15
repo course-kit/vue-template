@@ -5,7 +5,7 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 import { fetchCourse, fetchUser } from '../ck'
 const courseId = route.params.courseId
-await fetchUser()
+const { user } = await fetchUser()
 const { course } = await fetchCourse({ courseId })
 const { title, lessons } = course
 </script>
@@ -17,7 +17,7 @@ const { title, lessons } = course
         <router-link :to="{ name: 'home' }">Back to courses</router-link>
       </p>
       <h1>{{ title }}</h1>
-      <CourseHeader :course="course" />
+      <CourseHeader :course="course" :user="user" />
     </header>
     <div>
       <LessonSummary

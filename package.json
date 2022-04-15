@@ -1,7 +1,7 @@
 {
   "name": "coursekit-vue-template",
   "private": false,
-  "version": "0.2.0",
+  "version": "0.2.2",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -14,7 +14,6 @@
     "node-fetch": "^2.6.7",
     "stripe": "^8.213.0",
     "vue": "^3.2.25",
-    "vue-final-modal": "^3.4.3",
     "vue-router": "^4.0.14",
     "vue-vimeo-player": "^1.1.2"
   },

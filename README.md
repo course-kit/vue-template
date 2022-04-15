@@ -1,7 +1,31 @@
-# Vue 3 + Vite
+# CourseKit Vue Template
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Installation
 
-## Recommended IDE Setup
+```bash
+npm install
+```
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+## Connecting school with .env
+
+1. Create an account at [https://coursekit.dev](https://coursekit.dev)
+
+2. In dashboard, go to *Schools* tab and get School ID.
+
+3. Copy .env.example file
+
+```bash
+cp .env.example .env
+```
+
+4. Set `VITE_SCHOOL_ID` to your school ID in .env
+
+```
+VITE_SCHOOL_ID=sc73jmdoi3
+```
+
+## Running server
+
+```bash
+npm run dev
+```

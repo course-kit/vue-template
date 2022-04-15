@@ -19,7 +19,7 @@ const { lesson, course, lessonStatus } = await fetchCourseLessonAndUser({ course
     </header>
     <div>
       <LessonUnauthorized v-if="lessonStatus === 401" :course-id="courseId" :user="user" />
-      <LessonForbidden v-else-if="lessonStatus === 403" :course-id="courseId" />
+      <LessonForbidden v-else-if="lessonStatus === 403" :course-id="courseId" :user="user" />
       <LessonContent v-else />
     </div>
   </div>

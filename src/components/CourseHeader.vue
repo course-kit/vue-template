@@ -1,8 +1,11 @@
 <script setup>
 import { ChevronDoubleRightIcon } from '@heroicons/vue/solid'
-import EnrollFree from './EnrollFree.vue'
 const props = defineProps({
   course: {
+    type: Object,
+    required: true
+  },
+  user: {
     type: Object,
     required: true
   }
@@ -20,11 +23,10 @@ const isFirstLesson = props.course.lessons[0].id === props.course.nextLessonId
         <ChevronDoubleRightIcon />
       </router-link>
     </div>
-    <EnrollFree
-v-else
-      :course-id="course.id"
-      text="Enroll now"
-      classes="button primary icon"
-    />
+    <button
+      v-else
+      @click="user.enrollRedirect(course.id)"
+      class="button primary icon"
+    >Enroll now</button>
   </div>
 </template>

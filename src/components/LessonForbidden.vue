@@ -1,8 +1,11 @@
 <script setup>
-import EnrollFree from './EnrollFree.vue'
 defineProps({
   courseId: {
     type: String,
+    required: true
+  },
+  user: {
+    type: Object,
     required: true
   }
 })
@@ -12,11 +15,10 @@ defineProps({
   <div class="LessonNoAccess">
     <div>
       Please
-      <EnrollFree
-        :course-id="courseId"
-        text="enroll"
-        classes="underline cursor-pointer"
-      />
+      <span
+        @click="user.enrollRedirect(courseId)"
+        class="underline cursor-pointer"
+      >enroll</span>
       to view this lesson.
     </div>
   </div>
