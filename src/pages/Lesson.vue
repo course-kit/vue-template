@@ -6,7 +6,7 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 import { fetchCourseLessonAndUser } from '../ck'
 const { courseId, lessonId }  = route.params
-const { lesson, course, lessonStatus } = await fetchCourseLessonAndUser({ courseId, lessonId })
+const { lesson, course, lessonStatus, user } = await fetchCourseLessonAndUser({ courseId, lessonId })
 </script>
 
 <template>

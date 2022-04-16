@@ -25,8 +25,8 @@ const isFirstLesson = props.course.lessons[0].id === props.course.nextLessonId
     </div>
     <button
       v-else
-      @click="user.enrollRedirect(course.id)"
       class="button primary icon"
+      @click="user.enrollRedirect(course.id)"
     >Enroll now</button>
   </div>
 </template>

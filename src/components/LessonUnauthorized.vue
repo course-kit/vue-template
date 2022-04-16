@@ -23,8 +23,8 @@ defineProps({
       </span>
       or
       <span
-          @click="user.enrollRedirect(courseId)"
           class="underline cursor-pointer"
+          @click="user.enrollRedirect(courseId)"
       >enroll</span>
       to view this lesson.
     </div>
