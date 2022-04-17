@@ -9,7 +9,7 @@
     "lint": "eslint 'src/**/*.{js,vue}'"
   },
   "dependencies": {
-    "@coursekit/client": "^0.2.1",
+    "@coursekit/client": "0.2.2",
     "@heroicons/vue": "^1.0.5",
     "node-fetch": "^2.6.7",
     "stripe": "^8.213.0",

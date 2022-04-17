@@ -1,5 +1,9 @@
 # CourseKit Vue Template
 
+A minimal Vue 3 + Vite template for a CourseKit frontend site.
+
+Live demo: [https://coursekit-vue-template.netlify.app](https://coursekit-vue-template.netlify.app)
+
 ## Installation
 
 ```bash
@@ -29,3 +33,7 @@ VITE_SCHOOL_ID=sc73jmdoi3
 ```bash
 npm run dev
 ```
+
+## School URL
+
+By default, the dev server runs on port 3000. If you use a different poty, ensure that the School URL matches the dev server URL so that log in and log out redirects work correctly.
