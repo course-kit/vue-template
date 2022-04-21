@@ -36,4 +36,4 @@ npm run dev
 
 ## School URL
 
-By default, the dev server runs on port 3000. If you use a different poty, ensure that the School URL matches the dev server URL so that log in and log out redirects work correctly.
+By default, the dev server runs on port 3000. If you use a different port, ensure that the School URL matches the dev server URL so that log in and log out redirects work correctly.
